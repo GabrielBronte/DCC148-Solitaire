@@ -23,10 +23,10 @@ public class ScoreKeeper : MonoBehaviour
 
     public bool JogadorVenceu()
     {
-        int i=0;
-        foreach(Selectable topstack in topStacks)
+        int i = 0;
+        foreach(Selectable topStack in topStacks)
         {
-            i+= topstack.valor;
+            i += topStack.valor;
         }
         if(i>=52)
         {

@@ -162,7 +162,7 @@ public class Solitaire : MonoBehaviour
         localizacaoBaralho = 0;
     }
 
-    public void DealFromDeck()
+    public void AcoesBaralho()
     {
         foreach(Transform filho in cartaBaralho.transform)
         {

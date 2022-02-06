@@ -50,35 +50,32 @@ public class UserInput : MonoBehaviour
             {
                 if (hit.collider.CompareTag("Deck"))
                 {
-                    Deck();
+                    Baralho();
                 }
                 else if (hit.collider.CompareTag("Card"))
                 {
-                    Card(hit.collider.gameObject);
+                    Carta(hit.collider.gameObject);
                 }
                 else if (hit.collider.CompareTag("Top"))
                 {
-                    Top(hit.collider.gameObject);              
+                    Topo(hit.collider.gameObject);              
                 }
                 else if (hit.collider.CompareTag("Bottom"))
                 {
-                    Bottom(hit.collider.gameObject);
+                    Fundo(hit.collider.gameObject);
                 }
             }
         }
     }
 
-    void Deck()
+    void Baralho()
     {
-        print("Click deck");
-        solitaire.DealFromDeck();
+        solitaire.AcoesBaralho();
         slot1 = this.gameObject;
     }
 
-    void Card(GameObject cartaSelecionada)
+    void Carta(GameObject cartaSelecionada)
     {
-        print("Click card");
-
         if(!cartaSelecionada.GetComponent<Selectable>().viradoCima)
         {
             if(!Bloqueado(cartaSelecionada))
@@ -132,9 +129,8 @@ public class UserInput : MonoBehaviour
         }
     }
     
-    void Bottom(GameObject cartaSelecionada)
+    void Fundo(GameObject cartaSelecionada)
     {
-        print("Click bottom");
         if(slot1.CompareTag("Card"))
         {
             if(slot1.GetComponent<Selectable>().valor == 13)
@@ -144,9 +140,8 @@ public class UserInput : MonoBehaviour
         }
     }
     
-    void Top(GameObject cartaSelecionada)
+    void Topo(GameObject cartaSelecionada)
     {
-        print("Click top");
         if(slot1.CompareTag("Card"))
         {
             if(slot1.GetComponent<Selectable>().valor == 1)

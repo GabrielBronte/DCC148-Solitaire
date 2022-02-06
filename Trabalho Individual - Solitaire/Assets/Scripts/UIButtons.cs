@@ -23,11 +23,11 @@ public class UIButtons : MonoBehaviour
         {
             Destroy(carta.gameObject);
         }
-        LimparValoresTop();
+        LimparValoresTopo();
         FindObjectOfType<Solitaire>().Jogar();
     }
 
-    public void LimparValoresTop()
+    public void LimparValoresTopo()
     {
         Selectable[] selectables = FindObjectsOfType<Selectable>();
         foreach (Selectable selectable in selectables)
