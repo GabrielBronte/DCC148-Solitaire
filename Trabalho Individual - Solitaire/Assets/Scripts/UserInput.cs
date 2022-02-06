@@ -72,6 +72,7 @@ public class UserInput : MonoBehaviour
     {
         print("Click deck");
         solitaire.DealFromDeck();
+        slot1 = this.gameObject;
     }
 
     void Card(GameObject cartaSelecionada)

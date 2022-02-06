@@ -45,6 +45,10 @@ public class Solitaire : MonoBehaviour
 
     public void Jogar()
     {
+        foreach(List<string> lista in bottoms)
+        {
+            lista.Clear();
+        }
         baralho = GerarBaralho();
         Embaralhar(baralho);
         foreach (string card in baralho) print(card);
