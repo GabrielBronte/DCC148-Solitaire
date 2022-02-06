@@ -314,7 +314,7 @@ public class UserInput : MonoBehaviour
             {
                 if((solitaire.topPos[i].GetComponent<Selectable>().naipe == slot1.GetComponent<Selectable>().naipe) && (solitaire.topPos[i].GetComponent<Selectable>().valor == slot1.GetComponent<Selectable>().valor - 1))
                 {
-                    if(PossuiFilhos(slot1))
+                    if(NaoPossuiFilho(slot1))
                     {
                         
                         slot1 = cartaSelecionada;
@@ -344,7 +344,7 @@ public class UserInput : MonoBehaviour
         }
     }
 
-    bool PossuiFilhos(GameObject carta)
+    bool NaoPossuiFilho(GameObject carta)
     {
         int i = 0;
         foreach(Transform filho in carta.transform)
